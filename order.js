@@ -16,7 +16,8 @@ export async function OrderByName(page, keyWord) {
     const productLinks = document.querySelectorAll(".product--root > a");
     productLinks.forEach((link) => {
       let label = link.getAttribute("aria-label").replaceAll(" ", "");
-      let included = label.includes(ks[0]) && label.includes(ks[1]);
+      let included =
+        label.includes(ks[0]) && label.includes(ks[1]) && label.includes(ks[2]);
       console.log(label);
       if (included) {
         //   found = true;
@@ -82,6 +83,9 @@ export async function OrderById(page, productId) {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   console.log(productId);
   await page.goto(baseUrl + productUrl + productId);
+
+  // 限 2 品項
+  await page.select(".product-form--quantity", "2");
 
   try {
     await page.waitForSelector('.agree_box input[type="checkbox"]', {
