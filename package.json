@@ -1,0 +1,11 @@
+{
+  "name": "test",
+  "type": "module",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "dependencies": {
+    "config": "^3.3.12",
+    "puppeteer": "^23.6.1"
+  }
+}

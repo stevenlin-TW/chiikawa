@@ -1,0 +1,9 @@
+{
+  "url": {
+    "base": "https://chiikawamarket.jp",
+    "new": "/collections/20250308?page=",
+    "cart": "/cart",
+    "product": "/products/",
+    "login": "/account/login"
+  }
+}
